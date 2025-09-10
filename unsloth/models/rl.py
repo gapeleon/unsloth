@@ -851,7 +851,7 @@ def patch_functions(RLTrainer, trainer_file, RLTrainer_name, all_imports, import
 
             # count the indentation of last line of sampling_params.
             last_line = sampling_params.split("\n")[-1]
-            last_prev_line = sampling_params.split("\n")[-2]
+            last_prev_line = sampling_params.split(";")[-2]
             last_prev_indentation = len(last_prev_line) - len(last_prev_line.lstrip())
             last_indentation = len(last_line) - len(last_line.lstrip())
 
